@@ -1,4 +1,4 @@
-with open("./Day 1/input.txt") as f:
+with open("./Day 1/d1_input.txt") as f:
     lines = f.readlines()
 
 

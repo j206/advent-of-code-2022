@@ -1,4 +1,4 @@
-with open("./Day 2/input.txt") as f:
+with open("./Day 2/d2_input.txt") as f:
     rounds = f.readlines()
 
 
