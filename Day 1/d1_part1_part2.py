@@ -8,7 +8,6 @@ def part1():
     for line in lines:
         if len(line) != 1:
             current_calories += int(line.strip())
-
             if current_calories > max_calories:
                 max_calories = current_calories
         else:
@@ -23,10 +22,9 @@ def part2():
     for line in lines:
         if len(line) != 1:
             current_calories += int(line.strip())
-        else:
-            if current_calories > min(top_three):
-                top_three.remove(min(top_three))
-                top_three.append(current_calories)
+        elif current_calories > min(top_three):
+            top_three.remove(min(top_three))
+            top_three.append(current_calories)
 
             current_calories = 0
     return print("part 2: ", sum(top_three))

@@ -2,20 +2,6 @@ with open("./Day 3/d3_input.txt") as f:
     rucksacks = f.readlines()
 
 
-def build_dictionary():
-    priority_values = {}
-    lower_case = "abcdefghijklmnopqrstuvwxyz"
-    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    for i, letter in enumerate(lower_case, 1):
-        priority_values[letter] = i
-
-    for i, letter in enumerate(upper_case, 27):
-        priority_values[letter] = i
-
-    return priority_values
-
-
 def part1():
     sum = 0
     values = build_dictionary()
@@ -44,7 +30,6 @@ def part2():
     i = 0
 
     while i < len(rucksacks):
-        counter += 1
         first = rucksacks[i].strip()
         second = rucksacks[i + 1].strip()
         third = rucksacks[i + 2].strip()
@@ -65,5 +50,20 @@ def part2():
         i += 3
     return print(sum)
 
+
 part1()
 part2()
+
+
+def build_dictionary():
+    priority_values = {}
+    lower_case = "abcdefghijklmnopqrstuvwxyz"
+    upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    for i, letter in enumerate(lower_case, 1):
+        priority_values[letter] = i
+
+    for i, letter in enumerate(upper_case, 27):
+        priority_values[letter] = i
+
+    return priority_values
