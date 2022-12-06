@@ -26,11 +26,6 @@ def part2():
             overlapped_count += 1
     return print(overlapped_count)
 
-
-part1()
-part2()
-
-
 def format_assignment(assignment):
     assignment_string = assignment.strip().replace(",", "-").split("-")
     assignment_int = [int(x) for x in assignment_string]
@@ -51,3 +46,8 @@ def check_overlap(p1_start, p1_end, p2_start, p2_end):
         return True
     else:
         return False
+
+        
+part1()
+part2()
+
