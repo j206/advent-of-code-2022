@@ -7,7 +7,7 @@ def part1():
 
     i = 0
     while i < len(data):
-        # to check for equality of items in array, compare length of array with length of set
+        # to check for uniqueness of items in array, compare length of array with length of set
         if (len(set(window)) == len(window)):
             return print(i + 4)
         window.remove(data[i])
