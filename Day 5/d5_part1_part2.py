@@ -55,6 +55,7 @@ def part2():
     return print(top_item)
 
 
+# messy lol but my dinner is ready
 def build_initial_state(manifest):
     c1, c2, c3, c4, c5, c6, c7, c8, c9 = ([] for i in range(9))
     for i in range(BOTTOM_OF_STACK_ROW, -1, -1):
