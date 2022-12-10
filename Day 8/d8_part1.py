@@ -4,9 +4,7 @@ with open("./Day 8/d8_input.txt") as f:
 
 def part1():
     visible = 0
-
-    # i == 0 or i == len(rows) or
-
+    
     for i, row in enumerate(rows):
         for j, col in enumerate(row):
             if i == 0 or i == len(rows) - 1 or j == 0 or j == len(row) - 1:
