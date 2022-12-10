@@ -1,6 +1,5 @@
 with open("./Day 9/d9_input.txt") as f:
     instructions = [l.strip() for l in f.readlines()]
-    instructions = instructions
 
 
 def part1():
@@ -11,7 +10,6 @@ def part1():
     for step in instructions:
         direction, steps = step[0], int(step[2])
         head, tail= move(direction, steps, head, tail, visited)
-        # print(step, head, tail, "\t\t", visited, len(visited))
     return print(len(visited))
 
 
