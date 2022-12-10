@@ -8,8 +8,9 @@ def part1():
     visited = set()
 
     for step in instructions:
-        direction, steps = step[0], int(step[2])
-        head, tail= move(direction, steps, head, tail, visited)
+        step = step.split(" ")
+        direction, steps = step[0], int(step[1])
+        head, tail = move(direction, steps, head, tail, visited)
     return print(len(visited))
 
 
@@ -52,7 +53,7 @@ def handle_tail(direction, head, tail):
         tail[1] -= 1
     # Down-Left
     elif ((head[0] - tail[0] == -2 and head[1] - tail[1] == -1) or
-          (head[0] - tail[0] == -1 and head[1] - tail[1] == -2)):
+            (head[0] - tail[0] == -1 and head[1] - tail[1] == -2)):
         tail[0] -= 1
         tail[1] -= 1
 
