@@ -7,8 +7,10 @@ def part1():
     cycle = 0
     signal_strength = 0
     queue = set()
+    crt = [[] for x in range (0, 6)]
 
     for i, instruction in enumerate(instructions):
+        print(f"checking cycle {cycle} | i {i} | x: {x}")
         cycle += 1
         x = check_queue_for_completion(i, x, queue)
 
@@ -17,6 +19,7 @@ def part1():
             signal_strength += (x * cycle)
 
         if instruction[0] == "addx":
+            print(f"checking cycle {cycle} | i {i} | x: {x}")
             cycle += 1
             queue.add(i)
 
